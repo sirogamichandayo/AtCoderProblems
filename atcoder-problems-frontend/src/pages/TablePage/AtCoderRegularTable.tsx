@@ -101,6 +101,29 @@ const AtCoderRegularTableSFC: React.FC<Props> = (props) => {
       <BootstrapTable
         data={contests}
         tableContainerClass="contest-table-responsive contest-regular-table-responsive"
+        pagination
+        options={{
+          paginationPosition: "top",
+          sizePerPage: 10,
+          sizePerPageList: [
+            {
+              text: "10",
+              value: 10,
+            },
+            {
+              text: "20",
+              value: 20,
+            },
+            {
+              text: "50",
+              value: 50,
+            },
+            {
+              text: "ALL",
+              value: props.contests.length,
+            },
+          ],
+        }}
       >
         <TableHeaderColumn
           isKey
