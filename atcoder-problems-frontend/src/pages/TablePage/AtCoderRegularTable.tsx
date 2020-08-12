@@ -95,6 +95,7 @@ const AtCoderRegularTableSFC: React.FC<Props> = (props) => {
     0
   );
   const header = ["A", "B", "C", "D", "E", "F", "F2"].slice(0, maxProblemCount);
+
   return (
     <Row className="my-4">
       <h2>{props.title}</h2>
@@ -103,6 +104,7 @@ const AtCoderRegularTableSFC: React.FC<Props> = (props) => {
         tableContainerClass="contest-table-responsive contest-regular-table-responsive"
         height="auto"
         pagination
+        striped
         options={{
           paginationPosition: "top",
           sizePerPage: 10,
